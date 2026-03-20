@@ -58,7 +58,7 @@ export function SideNav() {
                 : "text-stone-700 dark:text-stone-300 hover:bg-stone-200/60 dark:hover:bg-stone-700/40"
             }`}
           >
-            Beginning Faith (A, B & C)
+            Beginning Faith (A, B, C & D)
           </Link>
         </div>
         {sections.map((section) => (

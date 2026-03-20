@@ -4,11 +4,12 @@ import Link from "next/link";
 import { CopyTranscriptButton } from "@/components/CopyTranscriptButton";
 import { TranscriptTextArea } from "@/components/TranscriptTextArea";
 
-const HEADER = `BEGINNING FAITH — PARTS A, B & C (Google Docs)
+const HEADER = `BEGINNING FAITH — PARTS A, B, C & D (Google Docs)
 
 Part A: Q&A (1a)–(24a) + study notes  
 Part B: Q&A (1b)–(16b) + study notes  
-Part C: Q&A (1c)–(16c) + study notes
+Part C: Q&A (1c)–(16c) + study notes  
+Part D: Q&A (1d)–(17d) + study notes
 
 One-click copy: use the button below, then paste into Google Docs (Cmd/Ctrl+V). You can also download the same text as a file from /beginning-faith-part-a-google-docs.txt
 
@@ -31,6 +32,16 @@ const DIVIDER_C = `
 ---
 
 PART C — COMPLEX QUESTIONS AND OTHERS
+
+---
+
+`;
+
+const DIVIDER_D = `
+
+---
+
+PART D — THE END TIMES
 
 ---
 
@@ -73,13 +84,13 @@ export default function BeginningFaithPage() {
           Home
         </Link>
         <span className="mx-2">/</span>
-        Beginning Faith — Parts A, B &amp; C
+        Beginning Faith — Parts A, B, C &amp; D
       </p>
       <h1 className="text-2xl font-bold text-stone-900 dark:text-white mb-2">
-        Beginning Faith — Parts A, B &amp; C
+        Beginning Faith — Parts A, B, C &amp; D
       </h1>
       <p className="text-stone-600 dark:text-stone-400 text-sm mb-6">
-        Part A (1a–24a), Part B (1b–16b), and Part C (1c–16c): full Q&amp;A blocks and study notes for
+        Part A (1a–24a), Part B (1b–16b), Part C (1c–16c), and Part D (1d–17d): full Q&amp;A blocks and study notes for
         Google Docs.{" "}
         <a
           href="/beginning-faith-part-a-google-docs.txt"

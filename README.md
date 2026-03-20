@@ -10,7 +10,7 @@
 - Verses presented **without redundancy or omissions**, organized by **category** and **theme**  
 - **Left-side scrollable navigation** (in the app) for fast movement between sections/subsections  
 - **Transcript catalog** (`/transcripts`) — all **292** source summaries in one block; **one-click copy** for Google Docs (same text in `public/transcript-extractions-google-docs.txt`)  
-- **Beginning Faith — Parts A, B & C** (`/beginning-faith`) — Q&A **(1a)–(24a)**, **(1b)–(16b)**, and **(1c)–(16c)** plus study notes; **one-click copy** for Google Docs (`public/beginning-faith-part-a-google-docs.txt`; sources: Part A file + Part B / Part C chunk dirs → `*-part-b-source.txt` / `*-part-c-source.txt`; refresh with `npm run emit:beginning-faith-doc`)  
+- **Beginning Faith — Parts A, B, C & D** (`/beginning-faith`) — Q&A **(1a)–(24a)**, **(1b)–(16b)**, **(1c)–(16c)**, and **(1d)–(17d)** plus study notes; **one-click copy** for Google Docs (`public/beginning-faith-part-a-google-docs.txt`; sources: Part A file + Part B / C / D chunk dirs → `*-part-*-source.txt`; refresh with `npm run emit:beginning-faith-doc`)  
 - Modern, responsive UI built with **Next.js 16 + App Router + Tailwind CSS**  
 
 On GitHub, you can use the table of contents in the left sidebar to jump to any section of this README.

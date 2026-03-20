@@ -44,12 +44,13 @@ If your Doc uses only “Verse Chosen” (e.g. `Isaiah 24:19`) **without** full 
 - **Google Docs–ready export:** run `npm run emit:transcript-doc` → `public/transcript-extractions-google-docs.txt`.  
 - **In the app:** open `/transcripts` and use **Copy entire document** (or download the `.txt`).
 
-## Beginning Faith — Parts A, B & C (Q&A + study notes)
+## Beginning Faith — Parts A, B, C & D (Q&A + study notes)
 
 - **Part A:** `data/beginning-faith-part-a-source.txt`.  
 - **Part B:** `data/beginning-faith-part-b/chunk-*.txt` (concatenated to `data/beginning-faith-part-b-source.txt` when you run the emit script).  
 - **Part C:** `data/beginning-faith-part-c/chunk-*.txt` (concatenated to `data/beginning-faith-part-c-source.txt` when you run the emit script).  
-- **Google Docs–ready export:** run `npm run emit:beginning-faith-doc` → `public/beginning-faith-part-a-google-docs.txt` (combined A + B + C).  
+- **Part D:** `data/beginning-faith-part-d/chunk-*.txt` (concatenated to `data/beginning-faith-part-d-source.txt` when you run the emit script).  
+- **Google Docs–ready export:** run `npm run emit:beginning-faith-doc` → `public/beginning-faith-part-a-google-docs.txt` (combined A + B + C + D).  
 - **In the app:** open `/beginning-faith` and use **Copy entire document** (or download the `.txt`).
 
 ## Automated Pauline / transcript-style chunk (already in repo)
