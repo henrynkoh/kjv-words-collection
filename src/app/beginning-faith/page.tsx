@@ -4,10 +4,11 @@ import Link from "next/link";
 import { CopyTranscriptButton } from "@/components/CopyTranscriptButton";
 import { TranscriptTextArea } from "@/components/TranscriptTextArea";
 
-const HEADER = `BEGINNING FAITH — PART A & PART B (Google Docs)
+const HEADER = `BEGINNING FAITH — PARTS A, B & C (Google Docs)
 
 Part A: Q&A (1a)–(24a) + study notes  
-Part B: Q&A (1b)–(16b) + study notes
+Part B: Q&A (1b)–(16b) + study notes  
+Part C: Q&A (1c)–(16c) + study notes
 
 One-click copy: use the button below, then paste into Google Docs (Cmd/Ctrl+V). You can also download the same text as a file from /beginning-faith-part-a-google-docs.txt
 
@@ -15,11 +16,21 @@ One-click copy: use the button below, then paste into Google Docs (Cmd/Ctrl+V). 
 
 `;
 
-const DIVIDER = `
+const DIVIDER_B = `
 
 ---
 
 PART B — BUILDING FAITH
+
+---
+
+`;
+
+const DIVIDER_C = `
+
+---
+
+PART C — COMPLEX QUESTIONS AND OTHERS
 
 ---
 
@@ -34,12 +45,22 @@ function loadBeginningFaithText(): string {
     process.cwd(),
     "data/beginning-faith-part-b-source.txt"
   );
+  const partCPath = path.join(
+    process.cwd(),
+    "data/beginning-faith-part-c-source.txt"
+  );
   const partA = fs.readFileSync(partAPath, "utf8").trimEnd();
-  if (!fs.existsSync(partBPath)) {
-    return `${HEADER}${partA}\n`;
+  let out = `${HEADER}${partA}`;
+
+  if (fs.existsSync(partBPath)) {
+    const partB = fs.readFileSync(partBPath, "utf8").trimEnd();
+    out = `${out}${DIVIDER_B}${partB}`;
   }
-  const partB = fs.readFileSync(partBPath, "utf8").trimEnd();
-  return `${HEADER}${partA}${DIVIDER}${partB}\n`;
+  if (fs.existsSync(partCPath)) {
+    const partC = fs.readFileSync(partCPath, "utf8").trimEnd();
+    out = `${out}${DIVIDER_C}${partC}`;
+  }
+  return `${out}\n`;
 }
 
 export default function BeginningFaithPage() {
@@ -52,13 +73,14 @@ export default function BeginningFaithPage() {
           Home
         </Link>
         <span className="mx-2">/</span>
-        Beginning Faith — Parts A &amp; B
+        Beginning Faith — Parts A, B &amp; C
       </p>
       <h1 className="text-2xl font-bold text-stone-900 dark:text-white mb-2">
-        Beginning Faith — Parts A &amp; B
+        Beginning Faith — Parts A, B &amp; C
       </h1>
       <p className="text-stone-600 dark:text-stone-400 text-sm mb-6">
-        Part A (1a–24a) and Part B (1b–16b): full Q&amp;A blocks and study notes for Google Docs.{" "}
+        Part A (1a–24a), Part B (1b–16b), and Part C (1c–16c): full Q&amp;A blocks and study notes for
+        Google Docs.{" "}
         <a
           href="/beginning-faith-part-a-google-docs.txt"
           className="text-amber-700 dark:text-amber-300 hover:underline"

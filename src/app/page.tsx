@@ -33,7 +33,7 @@ export default function Home() {
               href="/beginning-faith"
               className="inline-flex items-center justify-center rounded-lg border border-amber-600/50 dark:border-amber-500/40 px-5 py-2.5 text-sm font-medium text-amber-800 dark:text-amber-200 hover:bg-amber-50 dark:hover:bg-amber-950/40 transition-colors"
             >
-              Beginning Faith — A & B
+              Beginning Faith — A, B &amp; C
             </Link>
             <Link
               href="#overview"
