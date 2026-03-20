@@ -4,7 +4,10 @@ import Link from "next/link";
 import { CopyTranscriptButton } from "@/components/CopyTranscriptButton";
 import { TranscriptTextArea } from "@/components/TranscriptTextArea";
 
-const HEADER = `PART A — BEGINNING FAITH (Q&A 1a–24a + study notes)
+const HEADER = `BEGINNING FAITH — PART A & PART B (Google Docs)
+
+Part A: Q&A (1a)–(24a) + study notes  
+Part B: Q&A (1b)–(16b) + study notes
 
 One-click copy: use the button below, then paste into Google Docs (Cmd/Ctrl+V). You can also download the same text as a file from /beginning-faith-part-a-google-docs.txt
 
@@ -12,17 +15,35 @@ One-click copy: use the button below, then paste into Google Docs (Cmd/Ctrl+V). 
 
 `;
 
-function loadPartAText(): string {
-  const fullPath = path.join(
+const DIVIDER = `
+
+---
+
+PART B — BUILDING FAITH
+
+---
+
+`;
+
+function loadBeginningFaithText(): string {
+  const partAPath = path.join(
     process.cwd(),
     "data/beginning-faith-part-a-source.txt"
   );
-  const body = fs.readFileSync(fullPath, "utf8").trimEnd();
-  return `${HEADER}${body}\n`;
+  const partBPath = path.join(
+    process.cwd(),
+    "data/beginning-faith-part-b-source.txt"
+  );
+  const partA = fs.readFileSync(partAPath, "utf8").trimEnd();
+  if (!fs.existsSync(partBPath)) {
+    return `${HEADER}${partA}\n`;
+  }
+  const partB = fs.readFileSync(partBPath, "utf8").trimEnd();
+  return `${HEADER}${partA}${DIVIDER}${partB}\n`;
 }
 
 export default function BeginningFaithPage() {
-  const fullText = loadPartAText();
+  const fullText = loadBeginningFaithText();
 
   return (
     <div className="max-w-4xl mx-auto px-6 py-10">
@@ -31,13 +52,13 @@ export default function BeginningFaithPage() {
           Home
         </Link>
         <span className="mx-2">/</span>
-        Beginning Faith — Part A
+        Beginning Faith — Parts A &amp; B
       </p>
       <h1 className="text-2xl font-bold text-stone-900 dark:text-white mb-2">
-        Part A — Beginning Faith
+        Beginning Faith — Parts A &amp; B
       </h1>
       <p className="text-stone-600 dark:text-stone-400 text-sm mb-6">
-        Full Q&amp;A block and study notes for Google Docs.{" "}
+        Part A (1a–24a) and Part B (1b–16b): full Q&amp;A blocks and study notes for Google Docs.{" "}
         <a
           href="/beginning-faith-part-a-google-docs.txt"
           className="text-amber-700 dark:text-amber-300 hover:underline"

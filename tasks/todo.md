@@ -13,3 +13,4 @@
 - **2025-03-19:** Added automated KJV fetch + 142-verse Pauline chunk at #1070–1211; `verses.ts` merges chunk3, transcript, chunk4; `npm run build` OK.
 - **2025-03-19:** Stored 292 transcript source summaries in `data/transcript-catalog-source.txt`; `/transcripts` one-click copy; `public/transcript-extractions-google-docs.txt`; `npm run emit:transcript-doc` to refresh public file.
 - **2025-03-19:** Part A “Beginning Faith” in `data/beginning-faith-part-a-source.txt`; `/beginning-faith` page + `public/beginning-faith-part-a-google-docs.txt`; `npm run emit:beginning-faith-doc` to refresh.
+- **2025-03-19:** Part B “Building Faith” `(1b)–(16b)` in `data/beginning-faith-part-b/` chunks; emit concatenates A+B into public `.txt` and `beginning-faith-part-b-source.txt`.
