@@ -9,6 +9,8 @@
 - **KJV** verses with **Korean 흠정역** where available  
 - Verses presented **without redundancy or omissions**, organized by **category** and **theme**  
 - **Left-side scrollable navigation** (in the app) for fast movement between sections/subsections  
+- **Transcript catalog** (`/transcripts`) — all **292** source summaries in one block; **one-click copy** for Google Docs (same text in `public/transcript-extractions-google-docs.txt`)  
+- **Beginning Faith — Part A** (`/beginning-faith`) — Q&A **(1a)–(24a)** plus study notes; **one-click copy** for Google Docs (`public/beginning-faith-part-a-google-docs.txt`; source: `data/beginning-faith-part-a-source.txt`; refresh with `npm run emit:beginning-faith-doc`)  
 - Modern, responsive UI built with **Next.js 16 + App Router + Tailwind CSS**  
 
 On GitHub, you can use the table of contents in the left sidebar to jump to any section of this README.
@@ -39,6 +41,7 @@ All docs live under `docs/`:
 | [**Manual**](docs/MANUAL.md) | Full user & maintainer guide |
 | [**Tutorial**](docs/TUTORIAL.md) | Step-by-step: run app, add a verse, build \u0026 deploy |
 | [**Ads \u0026 marketing**](docs/ads/README.md) | Copy for Facebook, Instagram, Threads, Blogger, Naver Blog, Tistory, WordPress, newsletter, and email |
+| [**Import dataset**](docs/IMPORT_DATASET.md) | How to bring your full Google Doc / export into the app (no sign-in required for builds) |
 
 Use the GitHub sidebar TOC to scroll between these sections quickly.
 

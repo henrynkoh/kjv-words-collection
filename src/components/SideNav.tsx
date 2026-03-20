@@ -40,6 +40,26 @@ export function SideNav() {
           >
             All verses
           </Link>
+          <Link
+            href="/transcripts"
+            className={`text-sm rounded-r-md transition-colors block px-4 py-2 mt-1 ${
+              pathname === "/transcripts"
+                ? "bg-amber-100 dark:bg-amber-900/40 text-amber-900 dark:text-amber-100 font-medium border-l-2 border-amber-600"
+                : "text-stone-700 dark:text-stone-300 hover:bg-stone-200/60 dark:hover:bg-stone-700/40"
+            }`}
+          >
+            Transcript catalog (1–292)
+          </Link>
+          <Link
+            href="/beginning-faith"
+            className={`text-sm rounded-r-md transition-colors block px-4 py-2 mt-1 ${
+              pathname === "/beginning-faith"
+                ? "bg-amber-100 dark:bg-amber-900/40 text-amber-900 dark:text-amber-100 font-medium border-l-2 border-amber-600"
+                : "text-stone-700 dark:text-stone-300 hover:bg-stone-200/60 dark:hover:bg-stone-700/40"
+            }`}
+          >
+            Beginning Faith (Part A)
+          </Link>
         </div>
         {sections.map((section) => (
           <div key={section.id} className="mb-2">

@@ -24,6 +24,18 @@ export default function Home() {
               Browse all verses
             </Link>
             <Link
+              href="/transcripts"
+              className="inline-flex items-center justify-center rounded-lg border border-amber-600/50 dark:border-amber-500/40 px-5 py-2.5 text-sm font-medium text-amber-800 dark:text-amber-200 hover:bg-amber-50 dark:hover:bg-amber-950/40 transition-colors"
+            >
+              Transcript catalog (copy for Docs)
+            </Link>
+            <Link
+              href="/beginning-faith"
+              className="inline-flex items-center justify-center rounded-lg border border-amber-600/50 dark:border-amber-500/40 px-5 py-2.5 text-sm font-medium text-amber-800 dark:text-amber-200 hover:bg-amber-50 dark:hover:bg-amber-950/40 transition-colors"
+            >
+              Beginning Faith — Part A
+            </Link>
+            <Link
               href="#overview"
               className="inline-flex items-center justify-center rounded-lg border border-stone-300 dark:border-stone-600 px-5 py-2.5 text-sm font-medium text-stone-700 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors"
             >

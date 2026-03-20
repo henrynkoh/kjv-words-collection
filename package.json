@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "generate:transcript": "node scripts/build-transcript-chunk.mjs",
+    "emit:transcript-doc": "node scripts/emit-transcript-google-doc.mjs",
+    "emit:beginning-faith-doc": "node scripts/emit-beginning-faith-doc.mjs"
   },
   "dependencies": {
     "next": "16.2.0",
